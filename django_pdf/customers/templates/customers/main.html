@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		main
+	</title>
+</head>
+<body>
+	{% for customer in object_list %}
+		{{customer}}
+		<a href="{% url 'customers:customer-pdf-view' customer.pk %}">
+			<button>pdf</button>
+		</a>
+		<br>
+		<hr>
+
+	{% endfor %}
+</body>
+</html>
